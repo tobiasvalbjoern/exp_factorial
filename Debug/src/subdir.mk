@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/exp_factorial.cpp 
+../src/main.cpp 
 
 OBJS += \
-./src/exp_factorial.o 
+./src/main.o 
 
 CPP_DEPS += \
-./src/exp_factorial.d 
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
