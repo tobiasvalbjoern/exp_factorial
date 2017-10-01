@@ -7,30 +7,23 @@
 using namespace std;
 
 template<class T>
-T sum_n(T x)
+const T sum_n(T t_x)
 {
 	T res;
 	T fact;
-	T total=0;
-	for (T n = 0; n <= x; n++)
+	T total = 0;
+	for (T n = 0; n <= t_x; ++n)
 	{
-/*
-		if (x<0)
-		{
-			x=abs(x);
-		}
-*/
+		fact = factorial_n(n);
 
-		if (n < 0)
-			cout << "That is not a positive integer.\n";
-		else
-		{
-			fact = factorial_n(n);
-			//cout << n << " factorial is: " << fact << endl;
-		}
-		res = pow(x, n/fact);
+		assert(factorial_n(1) == 1);
+		assert(factorial_n(2) == 2);
+		assert(factorial_n(3) == 6);
+		assert(factorial_n(10) == 3628800);
 
-		total+=res;
+		res = pow(t_x, n / fact);
+
+		total += res;
 	}
 	return total;
 }
