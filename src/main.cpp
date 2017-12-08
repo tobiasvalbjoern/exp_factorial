@@ -12,24 +12,17 @@
 #include <assert.h>
 #include "sum_n.h"
 
-using namespace std;
-
 int main() {
 
-	assert(sum_n<int>(0) == 1);
-	assert(sum_n<int>(1) == 2);
-	assert(sum_n<int>(2) == 5);
-	assert(sum_n<int>(3) == 8);
-
 	for (int x = 0; x <= 9; x++) {
-		cout << "Int input: " << x << " Output: "
-			 << sum_n<int>(x) << "\n" << endl;
+		std::cout << "Int input: " << x << " Output: "
+			 << sum_n<int>(x) << "\n" << std::endl;
 
 	}
 
 	for (double x = 0; x <= 9; x++) {
-		cout << "Double input: " << x << " Output: "
-			 << sum_n<double>(x) << "\n" << endl;
+		std::cout << "Double input: " << x << " Output: "
+			 << sum_n<double>(x) << "\n" << std::endl;
 
 	}
 }

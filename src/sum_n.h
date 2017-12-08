@@ -4,27 +4,12 @@
 #include "factorial_n.h"
 #include <math.h>
 #include <cmath>
-using namespace std;
 
 template<class T>
-const T sum_n(T t_x)
-{
-	T res;
-	T fact;
-	T total = 0;
-	for (T n = 0; n <= t_x; ++n)
-	{
-		fact = factorial_n(n);
+const T sum_n(T t_x) {
+	T total = 	0;
 
-		assert(factorial_n(1) == 1);
-		assert(factorial_n(2) == 2);
-		assert(factorial_n(3) == 6);
-		assert(factorial_n(10) == 3628800);
-
-		res = pow(t_x, n / fact);
-
-		total += res;
-	}
+	for (T n = 0; n <= t_x; ++n) {total += pow(t_x, n / factorial_n(n));}
 	return total;
 }
 
